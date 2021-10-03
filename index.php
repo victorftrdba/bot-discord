@@ -20,10 +20,51 @@ $discord->on('message', function ($message) use ($discord) {
 
     switch($message->content) {
         case '!bot':
-            $channel->sendFile('imgs/be014.gif');
+            $channel->sendMessage("", false, [
+                'image' => [
+                    'url' => 'https://i.pinimg.com/564x/fe/cc/5a/fecc5af878fd4dcb540c1cd451f45de3.jpg',
+                ],
+                "color" => '15158332', 
+                "title" => "### SEJA MUITO BEM-VINDO ###", 
+                "description" => "Servidor: House's Alien",
+                'fields' =>array(
+                        '0' => array(
+                            'name' => 'COMUNIDADE AMIGÁVEL',
+                            'value' => 'Prezamos pela ajuda ao próximo!',
+                            'inline' => true,
+                        ),
+                        '1' => array(
+                            'name' => 'DIVERSÃO',
+                            'value' => 'Diversão a todo momento!',
+                            'inline' => true,
+                        ),
+                    ),
+                    'footer' => array(
+                        'icon_url'  => 'https://discord.gg/CE9dUe3K8D',
+                        'text'  => "© House's Alien - Developed by victorDev",
+                    ),
+                ]);
             break;
         case '!help':
-            $channel->sendMessage('Precisando de ajuda? Consulte a documentação do Discord! https://support.discord.com/hc/pt-br/articles/360045138571-Guia-do-Iniciante-para-Discord');
+            $channel->sendMessage("", false, [
+                'image' => [
+                    'url' => 'https://www.teclasap.com.br/wp-content/uploads/2010/02/help.png',
+                ],
+                "color" => '3447003', 
+                "title" => "### PRECISANDO DE AJUDA? ###", 
+                "description" => 'Veja nossas regras!',
+                'fields' =>array(
+                        '0' => array(
+                            'name' => 'REGRA #1',
+                            'value' => 'O que acontece no Discord, fica no Discord!',
+                            'inline' => true,
+                        ),
+                    ),
+                'footer' => array(
+                    'icon_url'  => 'https://discord.gg/CE9dUe3K8D',
+                    'text'  => "© House's Alien - Developed by victorDev",
+                ),
+            ]);
             break;
         case 'bot burro':
             $channel->sendFile('imgs/laranjo1.jpg');
