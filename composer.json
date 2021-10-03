@@ -1,0 +1,6 @@
+{
+    "require": {
+        "team-reflex/discord-php": "dev-master",
+        "agorlov/discordmsg": "^1.0"
+    }
+}
